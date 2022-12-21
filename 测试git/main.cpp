@@ -5,7 +5,7 @@
 int main()
 {
 	int arr[10]{};
-	srand(time(0));
+	//srand((int)time(0));
 	binaryHeap<int> list;
 	list.buildNode();
 	for (int i = 0; i < 10; ++i)

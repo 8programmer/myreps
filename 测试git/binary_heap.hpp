@@ -7,8 +7,6 @@
 template<class T>
 class binaryHeap
 {
-
-
 	T* _list;
 	int _size;
 	int _cap;
@@ -99,6 +97,8 @@ public:
 	}
 	void foreach()
 	{
+		if (_size == 0)
+			return;
 		for (int i = 0; i < _size; ++i)
 			std::cout << _list[i] << " ";
 		std::cout << "\n";
