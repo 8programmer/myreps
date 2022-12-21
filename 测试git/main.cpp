@@ -19,12 +19,6 @@ int main()
 	list.foreach();
 	list.pop(temp);
 	list.foreach();
-	list.pop(temp);
-	list.foreach();
-	list.pop(temp);
-	list.foreach();
-	list.pop(temp);
-	list.foreach();
 	std::cout << list.Size() << "\n";
 	return 0;
 }
