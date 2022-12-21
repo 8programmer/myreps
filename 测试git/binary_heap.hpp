@@ -25,7 +25,7 @@ public:
 		if (_size >= _cap)
 		{
 			int cur = _cap;
-			T*temp = (T*)realloc(_list, sizeof(T) * 2 * _cap);
+			T* temp = (T*)realloc(_list, sizeof(T) * 2 * _cap);
 			assert(temp);
 			_list = temp;
 			memset(_list + _cap, 0, sizeof(T) * _cap);
@@ -106,5 +106,14 @@ public:
 	int Size()
 	{
 		return _size;
+	}
+	virtual~binaryHeap()
+	{
+		if (_list)
+		{
+			free(_list);//delete []_list;
+			_list = nullptr;
+		}
+		std::cout << "binaryHeap is destroy" << "\n";
 	}
 };
